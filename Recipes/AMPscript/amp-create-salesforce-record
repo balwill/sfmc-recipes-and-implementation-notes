@@ -1,0 +1,11 @@
+/* Create record in Salesforce */
+%%[
+    /* Returns the Id of the record created */
+    SET recordId = CreateSalesforceObject(
+        "salesforceObject", 3, 
+        "field1", @field1Value
+        , "field2", @field2Value
+        , "field3", @field3Value
+    )
+    
+ ]%%

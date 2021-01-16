@@ -1,0 +1,57 @@
+  
+/* Immediately retrieve record from Salesforce */
+/* This is the best way to retrieve information from Salesforce because data in synchronized data extensions is 15 minutes old */
+%%[
+    /* Returns Rows + fields from Salesforce */
+    SET @salesforceRows =  RetrieveSalesforceObjects(
+        "SalesforceObject", 
+        "field1, field2, field3",
+        "ID", "=", @ID
+    )
+  
+    /* If 1 record is found (which it always should be if using ID value) then set the fields  */
+    if RowCount(@contactRows) == 1 THEN
+        SET @salesforceRow = Row(@salesforceRows, 1)
+        SET @field1 = Field(@salesforceRow, "Field1")
+        SET @field2 = Field(@salesforceRow, "Field2")
+        SET @field3 = Field(@salesforceRow, "Field3")
+    ENDIF
+]%%
+
+/* Update a record in Salesforce */
+/* Returns '1' if update was successful and '0' if update is unsuccessful */
+%%[
+  
+  SET @updateResult = UpdateSingleSalesforceObject(
+    "salesforceObject", @idValue
+    , "field1", @field1Update
+  )
+
+]%%
+
+
+/* Update multiple records in Salesforce */
+%%[
+
+SET @recordsToUpdateRowSet =  RetrieveSalesforceObjects(
+    "SalesforceObject", 
+    "field1, field2, field3",
+    "fieldUsedToMatch", "=", @valueToUse
+)
+  
+FOR @i=1 TO RowCount(@recordsToUpdateRowSet) DO
+            
+  SET @recordsToUpdateRow = Row(@recordsToUpdateRowSet, @i)
+  SET @idValue = Field(@recordsToUpdateRow, "Id")
+
+  UpdateSingleSalesforceObject(
+      "salesforceObject", @idValue
+      , "field1", @field1Update
+      , "field2", @field2Update
+      ...
+  )
+  ENDIF
+
+NEXT @i 
+
+]%%
