@@ -119,6 +119,7 @@
                 <td>255</td>
             </tr>
         </table>
+        </ul>
 <h1>SMS Tracking Extract Recipe</h1>
     <ul>
         <li><h2>Automation Recipe</h2></li>
