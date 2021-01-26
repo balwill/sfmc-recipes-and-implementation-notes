@@ -1,34 +1,42 @@
-Email Tracking Extract Recipe
-    - Automation Recipe
-        - Append - _Sent dataview 
-        - Append - _Open dataview 
-        - Append - _Clicks dataview 
-        - Append - _Bounce dataview
-        - Append - _Unsubscribe dataview
-        - Update - _job dataview 
-        - Update - _Subscribers dataview 
-        - Update - _journey + _journeyactivity 
-    - Data Extension Props
-        - From_Email - EmailAddress
-        - Email_Address - EmailAddress
-        - Event_Type - Text (50)
-        - Is_Unique - Boolean
-        - URL - Text (900)
-        - Event_Date - Date 
-        - Is_Extracted - Boolean 
-        - Unique_Event_ID - Text (50) 
-        - Unsubscribe_Description - Text (50)
-        - Account_ID - Text (10)
-        - Journey_ID - Text (36)
-        - Journey_Version - Number 
-        - Email_ID - Number 
-        - Triggerer_Send_Definition_Object_ID - Text (50)
-        - Job_ID - Number 
-        - From_Name - Text (100)
-        - Subject - Text (255)
-        - Subscriber_Key - Text (100)
-        - Event_Reason - Text (255)
-        - Alias - Text (255)
+<h1>Email Tracking Extract Recipe</h1>
+    <ul>
+        <li><h2>Automation Recipe</h2></li>
+        <ul>
+            <li>Append - _Sent dataview</li>
+            <li>Append - _Open dataview</li>
+            <li>Append - _Clicks dataview</li>
+            <li>Append - _Bounce dataview</li>
+            <li>Append - _Unsubscribe dataview</li>
+            <li>Update - _job dataview</li>
+            <li>Update - _Subscribers dataview</li>
+            <li>Update - _journey + _journeyactivity</li>
+        </ul>
+
+        <li><h2>Data Extension Props</h2></li>
+        <ul>
+            <li>From_Email - EmailAddress</li>
+            <li>Email_Address - EmailAddress</li>
+            <li>Event_Type - Text (50)</li>
+            <li>Is_Unique - Boolean</li>
+            <li>URL - Text (900)</li>
+            <li>Event_Date - Date </li>
+            <li>Is_Extracted - Boolean</li>
+            <li>Unique_Event_ID - Text (50) </li>
+            <li>Unsubscribe_Description - Text (50)</li>
+            <li>Account_ID - Text (10)</li>
+            <li>Journey_ID - Text (36)</li>
+            <li>Journey_Version - Number </li>
+            <li>Email_ID - Number </li>
+            <li>Triggerer_Send_Definition_Object_ID - Text (50)</li>
+            <li>Job_ID - Number </li>
+            <li>From_Name - Text (100)</li>
+            <li>Subject - Text (255)</li>
+            <li>Subscriber_Key - Text (100)</li>
+            <li>Event_Reason - Text (255)</li>
+            <li> Alias - Text (255)</li>
+
+        </ul>
+    </ul>
 
 
 SMS Tracking Extract Recipe
