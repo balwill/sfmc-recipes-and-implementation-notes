@@ -119,28 +119,103 @@
                 <td>255</td>
             </tr>
         </table>
-
-
-SMS Tracking Extract Recipe
-    - Automation Recipe
-        - Update - _smsMessageTracking
-    Data Extension Props 
-        - Mobile_Message_Tracking_ID - Text (255)
-        - Short_Code - Number 
-        - Shared_Keyword - Text (50)
-        - Message_ID - Text (50)
-        - Mobile_Phone - Phone
-        - Sent - Boolean 
-        - Delivered - Boolean 
-        - Undelivered - Boolean 
-        - Event_Date - Date
-        - Inbound - Boolean 
-        - Outbound - Boolean 
-        - Message_Text - Text (255)
-        - Campaign_ID - Text (255)
-        - Is_Extracted - Boolean 
-        - Subscriber_Key - Text (100) 
-        - Enterprise_ID - Text (100)
-        - Activity_Name - Text (100)
-        
-    
+<h1>SMS Tracking Extract Recipe</h1>
+    <ul>
+        <li><h2>Automation Recipe</h2></li>
+        <ul>
+            <li>Update - _smsMessageTracking</li>
+        </ul>
+        <li><h2>Data Extension Props</h2></li>
+        <table>
+            <tr>
+                <th>Field Name</th>
+                <th>Type</th>
+                <th>Length</th>
+            </tr>
+            <tr>
+                <td>Mobile_Message_Tracking_ID</td>
+                <td>Text</td>
+                <td>255</td>
+            </tr>
+            <tr>
+                <td>Short_Code</td>
+                <td>Number</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Shared_Keyword</td>
+                <td>Text</td>
+                <td>50</td>
+            </tr>
+            <tr>
+                <td>Message_ID</td>
+                <td>Text</td>
+                <td>50</td>
+            </tr>
+            <tr>
+                <td>Mobile_Phone</td>
+                <td>Phone</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Sent</td>
+                <td>Boolean</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Delivered</td>
+                <td>Boolean</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Undelivered</td>
+                <td>Boolean</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Event_Date</td>
+                <td>Date</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Inbound</td>
+                <td>Boolean</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Outbound</td>
+                <td>Boolean</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Message_Text</td>
+                <td>Text</td>
+                <td>255</td>
+            </tr>
+            <tr>
+                <td>Campaign_ID</td>
+                <td>Text</td>
+                <td>255</td>
+            </tr>
+            <tr>
+                <td>Is_Extracted</td>
+                <td>Boolean</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Subscriber_Key</td>
+                <td>Text</td>
+                <td>100</td>
+            </tr>
+            <tr>
+                <td>Enterprise_ID</td>
+                <td>Text</td>
+                <td>100</td>
+            </tr>
+            <tr>
+                <td>Activity_Name</td>
+                <td>Text</td>
+                <td>100</td>
+            </tr>
+        </table>
+    </ul>
