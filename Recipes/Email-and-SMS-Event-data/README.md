@@ -23,60 +23,101 @@
                 <td></td>
             </tr>
             <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
+                <td>Email_Address</td>
+                <td>EmailAddress</td>
                 <td></td>
             </tr>
             <tr>
-                <td></td>
-                <td></td>
+                <td>Event_Type</td>
+                <td>Text</td>
+                <td>50</td>
+            </tr>
+            <tr>
+                <td>Is_Unique</td>
+                <td>Boolean</td>
                 <td></td>
             </tr>
             <tr>
-                <td></td>
-                <td></td>
+                <td>URL</td>
+                <td>Text</td>
+                <td>900</td>
+            </tr>
+            <tr>
+                <td>Event_Date</td>
+                <td>Date</td>
                 <td></td>
             </tr>
             <tr>
-                <td></td>
-                <td></td>
+                <td>Is_Extracted</td>
+                <td>Boolean</td>
                 <td></td>
             </tr>
             <tr>
+                <td>Unique_Event_ID</td>
+                <td>Text</td>
+                <td>50</td>
+            </tr>
+            <tr>
+                <td>Unsubscribe_Description</td>
+                <td>Text</td>
+                <td>50</td>
+            </tr>
+            <tr>
+                <td>Account_ID</td>
+                <td>Text</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td>Journey_ID</td>
+                <td>Text</td>
+                <td>36</td>
+            </tr>
+            <tr>
+                <td>Journey_Version</td>
+                <td>Number</td>
                 <td></td>
+            </tr>
+            <tr>
+                <td>Email_ID</td>
+                <td>Number</td>
                 <td></td>
+            </tr>
+            <tr>
+                <td>Triggerer_Send_Definition_Object_ID</td>
+                <td>Text</td>
+                <td>50</td>
+            </tr>
+            <tr>
+                <td>Job_ID</td>
+                <td>Number</td>
                 <td></td>
+            </tr>
+            <tr>
+                <td>From_Name</td>
+                <td>Text</td>
+                <td>100</td>
+            </tr>
+            <tr>
+                <td>Subject</td>
+                <td>Text</td>
+                <td>255</td>
+            </tr>
+            <tr>
+                <td>Subscriber_Key</td>
+                <td>Text</td>
+                <td>100</td>
+            </tr>
+            <tr>
+                <td>Event_Reason</td>
+                <td>Text</td>
+                <td>255</td>
+            </tr>
+            <tr>
+                <td>Alias</td>
+                <td>Text</td>
+                <td>255</td>
             </tr>
         </table>
-        <li><h2>Data Extension Props</h2></li>
-        <ul>
-            <li>From_Email - EmailAddress</li>
-            <li>Email_Address - EmailAddress</li>
-            <li>Event_Type - Text (50)</li>
-            <li>Is_Unique - Boolean</li>
-            <li>URL - Text (900)</li>
-            <li>Event_Date - Date </li>
-            <li>Is_Extracted - Boolean</li>
-            <li>Unique_Event_ID - Text (50) </li>
-            <li>Unsubscribe_Description - Text (50)</li>
-            <li>Account_ID - Text (10)</li>
-            <li>Journey_ID - Text (36)</li>
-            <li>Journey_Version - Number </li>
-            <li>Email_ID - Number </li>
-            <li>Triggerer_Send_Definition_Object_ID - Text (50)</li>
-            <li>Job_ID - Number </li>
-            <li>From_Name - Text (100)</li>
-            <li>Subject - Text (255)</li>
-            <li>Subscriber_Key - Text (100)</li>
-            <li>Event_Reason - Text (255)</li>
-            <li> Alias - Text (255)</li>
-        </ul>
-    </ul>
 
 
 SMS Tracking Extract Recipe
