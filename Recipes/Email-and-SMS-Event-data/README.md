@@ -11,7 +11,6 @@
             <li>Update - _Subscribers dataview</li>
             <li>Update - _journey + _journeyactivity</li>
         </ul>
-
         <li><h2>Data Extension Props</h2></li>
         <ul>
             <li>From_Email - EmailAddress</li>
@@ -34,7 +33,6 @@
             <li>Subscriber_Key - Text (100)</li>
             <li>Event_Reason - Text (255)</li>
             <li> Alias - Text (255)</li>
-
         </ul>
     </ul>
 
