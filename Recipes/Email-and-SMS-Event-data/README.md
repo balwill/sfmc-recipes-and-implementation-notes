@@ -11,6 +11,7 @@
             <li>Update - _Subscribers dataview</li>
             <li>Update - _journey + _journeyactivity</li>
         </ul>
+        <li><h2>DE Props</h2></li>
         <table>
             <tr>
                 <th>Field Name</th>
