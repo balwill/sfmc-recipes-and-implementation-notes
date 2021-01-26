@@ -11,6 +11,48 @@
             <li>Update - _Subscribers dataview</li>
             <li>Update - _journey + _journeyactivity</li>
         </ul>
+        <table>
+            <tr>
+                <th>Field Name</th>
+                <th>Type</th>
+                <th>Length</th>
+            </tr>
+            <tr>
+                <td>From_Email</td>
+                <td>EmailAddress</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
         <li><h2>Data Extension Props</h2></li>
         <ul>
             <li>From_Email - EmailAddress</li>
