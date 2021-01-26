@@ -1,0 +1,7 @@
+Mobile Connect Implementation Notes	
+    - Need to fill out CAF (Campaign Activation Form). This is used to 
+    - Process to provision short code typically takes 12-16 weeks
+    - Need to fill out Short Code Reservation form (this is a Google form where you submit your requests to Salesforce)
+        - Form link: https://docs.google.com/forms/d/e/1FAIpQLSfJPOXpWDoOegIyD0DZYlQ0V9-6KCIqMWb2Q-doJTQ4H5krkA/viewform
+    - Once any carrier approves the short code, a case can be raised with Salesforce to get it mapped to other BUs
+    - You can have the same short code provisioned across BUs, but keywords are not shareable 

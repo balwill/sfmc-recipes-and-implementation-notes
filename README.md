@@ -7,6 +7,7 @@
 <ul>
     <li>Extracting a flat file for Email and SMS Event data</li>
     <li>SSJS Automation Scripts</li>
+    <li>AMPscript Code</li>
     <li>Dataview Queries</li>
 </ul>
 

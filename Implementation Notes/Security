@@ -1,0 +1,17 @@
+
+SSO Setup (using Azure AD)
+	- Give SSO metadata file to Azure AD (this is found and downloaded from SFMC Setup)
+	- In Azure AD;
+		○ Create non-gallery application
+		○ Set up SSO (SAML)
+		○ Upload metadata file
+		○ Need to add sign-on URL
+		○ May need to change unique user identifier (Azure team should know what to use for this)
+		○ Copy app federation metadata URL
+	- In SFMC
+		○ Go to Key management and create SSO metadata and select fetch metadata from URL (copy and paste app federation metadata URL link)
+			§ We need to format the file to add <NameIDFormat> tag https://help.salesforce.com/articleView?id=mc_overview_saml_error_resolution.htm&type=5
+			§ Also remove single log out tag
+		○ Enable SSO 
+		○ Copy SP initiated link to give to Azure team to populate sign-in URL
+	- To test, have a separate user with SSO enabled and Federation ID populated 
