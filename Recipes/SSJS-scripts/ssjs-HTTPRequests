@@ -1,0 +1,22 @@
+
+<script runat="server">
+    Platform.Load("Core", "1.1");
+    
+    try {
+  
+        var hostUrl = "https://5a55fe04abcccb514030e979bd8c7535.m.pipedream.net";       // URL that you want to make the request to. This is a pastebin link as an example.
+        var httpReq = new Script.Util.HttpRequest(hostUrl);                             // Instantiates HTTP Request Object. More info here https://developer.salesforce.com/docs/atlas.en-us.noversion.mc-programmatic-content.meta/mc-programmatic-content/ssjs_platformContentSyndicationScriptUtilHttpRequest.htm
+        var postData = {                                                                // Data to include in the Body of the request
+            message: "Hello World!"
+        };
+  
+        httpReq.emptyContentHandling = 0                                                // Boolean variable. 0 = causes an error if payload is empty, 1 = continue the call with no error if payload is empty
+        httpReq.method = "POST";                                                        // Method of Request to use (i.e. GET, DELETE, UPDATE, etc.)
+        httpReq.contentType = "application/json"                                        // Content Type of the message
+        httpReq.postData = Stringify(postData)                                          // ONLY NEEDED IF MAKING POST REQUEST. Body needs to be stringified or else data won't go through
+  
+        var response = httpReq.send();                                                  // Executes the Request
+   
+    } catch(e) { Write(Stringify(e)); }
+
+</script>

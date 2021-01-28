@@ -9,6 +9,8 @@
     <li>SSJS Automation Scripts</li>
     <li>AMPscript Code</li>
     <li>Dataview Queries</li>
+    <li>Form page (using CloudPages) [WIP]</li>
+    <li>Preference Center (using CloudPages) [WIP]</li>
 </ul>
 
 <h2>Implementation Notes</h2>

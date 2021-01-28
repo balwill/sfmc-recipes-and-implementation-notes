@@ -1,0 +1,36 @@
+1. Create System User in CRM
+2. Create API User in SFMC
+3. Connect SFMC API User -> CRM System User 
+
+Troubleshooting: 
+
+Clearing Marketing Cloud Connect Configuration
+
+If none of the above helped, you can try clearing the Marketing Cloud Connect configuration and re-configuring it from scratch.
+
+As a first step, you will have to add the “Configurations” tab to your Sales/Service Cloud:
+
+Click Setup
+Follow the steps based on your UI:
+Salesforce Classic: Under the “Create” category, select Tabs
+Salesforce Lightning: Under the “User Interface” category, select Tabs
+Click New
+Choose “Configurations” from the Object drop-down menu
+Pick any Tab style
+Click Next > Next > Save
+Once the tab has been added, navigate to it by clicking the Plus symbol on the tab bar and click on the Configurations link. Now delete the existing configuration:
+
+Choose All under the “View” drop-down, and then click Go
+Delete the existing Configuration Object
+Now you are ready to re-configure Marketing Cloud Connect:
+
+Click the Marketing Cloud tab
+Enter the Marketing Cloud API Username and Password
+Select values for Send Types, Target Audience, Exclusion Audience, Support Ticket Recipient, and Tracking Preferences
+Click Marketing Cloud Tab once more, re-integrate individual Users as needed
+
+
+Other Tips: 
+- Make sure that the From Email is verified
+- Make sure email renders correctly 
+- If data is coming in (i.e. a DE was created and info is entering SFMC) it's likely an issue with either the email or Send Classification
