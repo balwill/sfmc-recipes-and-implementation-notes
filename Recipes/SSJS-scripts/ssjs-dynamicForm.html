@@ -1,0 +1,22 @@
+<div class="container" style="padding-top: 50px;">
+    <script runat="server">
+    Platform.Load("Core", "1.1")
+    
+    try {
+        var testDataExtension = DataExtension.Init("B207DB66-AF48-458A-8F48-FAC5B486C5E5");
+        var dataExtensionFields = testDataExtension.Fields.Retrieve();
+        var testObject = []
+
+        for(i = 0; i < 1; i++) {
+            testObject.push(dataExtensionFields[i])
+        }
+        
+        Write(Stringify(testObject))
+
+    } catch(e) {Write(Stringify(e))}
+    
+    
+  </script>
+  </div>
+  
+  

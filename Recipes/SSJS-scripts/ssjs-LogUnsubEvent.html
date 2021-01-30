@@ -1,0 +1,52 @@
+<!-- Unsubscribing all records in a data extension --> 
+<script runat="server">
+	Platform.Load("core","1.1");
+  
+	var UnsubscribeDE 	= DataExtension.Init(DE);
+	var Rows 			= UnsubscribeDE.Rows.Retrieve();  
+  
+	for(var i in Rows) {			   
+
+		var SubscriberKey 		= Rows[i]["Subscriber_Key"];
+		var UnsubscribeReason 	= Rows[i]["Unsubscribe_Reason"];
+		var MID 				= Rows[i]["MID"];
+		var JobId 				= Rows[i]["Job_Id"];
+		var ListId 				= Rows[i]["List_Id"];
+		var BatchId 			= Rows[i]["Batch_Id"];
+		var prox 				= new Script.Util.WSProxy();
+  		
+		prox.setClientId({"ID": MID});
+      	/* If you are unable to populate send information, just populate SubscriberKey, BatchId, and Reason (Batch ID can be 0) */
+      	var props = [
+			{Name: "subscriberKey", Value: SubscriberKey },
+			{Name: "JobId", 		Value: JobId },
+			{Name: "ListID", 		Value: ListId },              
+			{Name: "BatchID", 		Value: BatchId },
+			{Name: "Reason", 		Value: UnsubscribeReason }
+      	];
+
+  		var data = prox.execute(props, "LogUnsubEvent");
+	}
+
+</script>
+
+
+<!-- Unsubscribing a Single Record -->
+<script runat="server">
+	Platform.Load("core","1.1");
+ 
+	var prox = new Script.Util.WSProxy();
+	prox.setClientId({"ID": MID});
+  	/* If you are unable to populate send information, just populate SubscriberKey, BatchId, and Reason (Batch ID can be 0) */
+	
+	var props = [
+		{Name: "subscriberKey", 	Value: SubscriberKey },
+		{Name: "JobId", 		Value: JobId },
+		{Name: "ListID", 		Value: ListId },              
+		{Name: "BatchID", 		Value: BatchId },
+		{Name: "Reason", 		Value: UnsubscribeReason }
+  	];
+
+	var data = prox.execute(props, "LogUnsubEvent");
+
+</script>

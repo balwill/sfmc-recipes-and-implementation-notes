@@ -1,0 +1,28 @@
+<script runat="server">
+    Platform.Load("Core", "1.1")
+
+    try {
+        /* code A */
+    } catch(e) {
+        Write(Stringify(e))
+        /* code to execute when an error/exception is thrown during the execution of code A */
+    }
+</script>
+
+
+
+<!-- If using try catch to debug AMPscript... -->
+<script runat="server">
+    Platform.Load("Core", "1.1")
+
+    try { 
+</script>
+
+%%[INSERT AMPSCRIPT HERE]%%
+
+<script runat="server">
+    } catch(e) {
+        Write(Stringify(e))
+        /* code to execute when an error/exception is thrown during the execution of code A */
+    }
+</script>
