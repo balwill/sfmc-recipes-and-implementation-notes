@@ -1,22 +1,78 @@
 <div class="container" style="padding-top: 50px;">
     <script runat="server">
-    Platform.Load("Core", "1.1")
-    
-    try {
-        var testDataExtension = DataExtension.Init("B207DB66-AF48-458A-8F48-FAC5B486C5E5");
-        var dataExtensionFields = testDataExtension.Fields.Retrieve();
-        var testObject = []
+        Platform.Load("Core", "1.1")
 
-        for(i = 0; i < 1; i++) {
-            testObject.push(dataExtensionFields[i])
+        function compare(a, b) {
+            return a.Ordinal - b.Ordinal
         }
-        
-        Write(Stringify(testObject))
 
-    } catch(e) {Write(Stringify(e))}
-    
-    
-  </script>
-  </div>
-  
-  
+        function createFormFields(dataExtensionFields) {
+            var i;
+            for (i = 0; i < dataExtensionFields.length; i++) {
+                var fieldName = dataExtensionFields[i].Name;
+                var fieldLength = dataExtensionFields[i].MaxLength;
+
+                /* Converts SFMC field type => HTML input type */
+                switch (dataExtensionFields[i].FieldType) {
+                    case "Boolean":
+                        var fieldType = "checkbox"
+                        break;
+                    case "Date":
+                        var fieldType = "Date"
+                        break;
+                    case "Decimal":
+                        var fieldType = "Number"
+                        break;
+                    case "EmailAddress":
+                        var fieldType = "Email"
+                        break;
+                    case "Number":
+                        var fieldType = "Number"
+                        break;
+                    case "Phone":
+                        var fieldType = "tel"
+                        break;
+                    case "Text":
+                        var fieldType = "Text"
+                        break;
+                    default:
+                        var fieldType = "Text"
+                }
+
+                if (fieldName.indexOf('Hidden') > 0) {
+                    /* If you have any fields in your DE that contain the word 'Hidden' in them, the function will not ignore it. Or, if you want to create a hidden input, uncomment the string below. If you need to treat certain hidden fields differently, you should use a switch statement */
+                    /* Write("<input type='hidden' id='" + fieldName + "' name='"+ fieldName + "' value='' />" ) */
+                } else {
+                    Write(
+                        "<div class='mb-3'>" +
+                        "<label for='" + fieldName + "'class='form-label'>" + fieldName + "</label>" +
+                        "<input type='" + fieldType + "'class='form-control' id='" + fieldName + "' name='" + fieldName + "' maxlength='" + fieldLength + "' required=''>" +
+                        "</div>"
+                    )
+                }
+            }
+        }
+
+        try {
+            /* Insert DE external key below */
+            var formDataExtension = DataExtension.Init("B207DB66-AF48-458A-8F48-FAC5B486C5E5");
+            var formDataExtensionFields = formDataExtension.Fields.Retrieve();
+
+
+            /* Sort DE fields retrieved by Ordinal */
+            formDataExtensionFields.sort(compare);
+
+            /* Insert result page in 'action' property */
+            Write("<form method='POST' action=''>")
+            createFormFields(formDataExtensionFields);
+            Write("<button type='submit' class='btn btn-primary'>Submit</button>")
+            Write("</form>")
+
+            Write(Stringify(formDataExtensionFields))
+
+        } catch (e) {
+            Write(Stringify(e))
+        }
+
+    </script>
+</div>
