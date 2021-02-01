@@ -45,10 +45,33 @@ npm init
 npm install --save google-closure-compiler
 ```
 4. Create an app.js file and write your code (it can be named anything)
-5. Run google-closure compiler 
+5. Run google-closure-compiler 
 ```
 google-closure-compiler --js app.js --language_in ECMASCRIPT_2020 --js_output_file newApp.js --language_out ECMASCRIPT3
 ```
+
+## Debugging SSJS
+The classic way of debugging SSJS is to create a CloudPage, plug your code in, and debug by outputting values using 'Write()'. However, the downside to this is that CloudPages can be finicky. Sometimes, the changes show instantly after you publish them, and other times it can take up to 5 minutes. So here are some additional useful tips to help debug your code.
+
+* ### Using an SSJS linter
+For Javascript, there's a tool called ESlint. ESlint is basically a tool that 'pre-checks' your code for any errors before you actually execute it. An SSJS eslint config was actually created [here](https://github.com/JoernBerkefeld/eslint-config-ssjs), and can be used to verify SSJS code. It's not going to catch everything, but is helpful. Follow the instructions [here](https://github.com/JoernBerkefeld/eslint-config-ssjs) for how to use
+
+* ### Use a JSON Code resource
+JSON code resource generates a link you can use to check outputs and it's much faster to load. However, the only issue is that front-end code won't render. Instead you'll see a text-only output.
+
+* ### Using a Try/Catch Block
+Unfortunately, when you try to run code in CloudPages, whether it's AMPscript or SSJS, and your code is incorrect, the page will simply render a 500 error. This isn't helpful. However, if you add a Try/Catch block, you'll actually see the error message rendered
+```
+try {
+    /* Code you want to try out */
+} catch(error) {
+    Write(error)
+}
+```
+
+## Other Notes
+* If working with CloudPages for debugging/testing, keep in mind that it can take up to 5 minutes to load. So don't fret if it looks like your code isn't working.
+
 
 
 
