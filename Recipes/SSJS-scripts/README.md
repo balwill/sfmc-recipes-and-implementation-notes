@@ -29,26 +29,10 @@ In short, if you're using SFMC, you should really learn SSJS. It will make your 
 # SSJS Notes
 
 ## How to Convert Javascript ES6 -> ES3
-Unfortunately, SSJS doesn't support ECMAscript 3.0 (AKA ES3), this means SSJS can only us js capabilties from 1999. However, if you are someone who knows how to write in modern day javascript, or you just want to use a method not available in ES3, you can leverage Google's Closure Compiler tool.
+Unfortunately, SSJS doesn't support ECMAscript 3.0 (AKA ES3), this means SSJS can only us js capabilties from 1999. However, if you are someone who knows how to write in modern day javascript, or you just want to use a method not available in ES3, you can leverage what's called Polyfills
 
-### What is Google's Closure Compiler tool? 
-[Googles Closure Compiler](https://developers.google.com/closure/compiler) tool is a nifty tool for making Javascript download and run faster. It basically optimizes it and cuts out and 'dead' code. What's more, is that you can use it to convert your ES6 javascript code to ES3. 
-
-### Steps to Use Google's Closure Compiler tool 
-1. Open Visual Studio code and create a working directory
-2. Initialize npm 
-```
-npm init
-```
-3. Install  google-closure-compiler
-```
-npm install --save google-closure-compiler
-```
-4. Create an app.js file and write your code (it can be named anything)
-5. Run google-closure-compiler 
-```
-google-closure-compiler --js app.js --language_in ECMASCRIPT_2020 --js_output_file newApp.js --language_out ECMASCRIPT3
-```
+### What are Polyfills?
+Polyfills are blocks of code that basically "mimic" a specific modern-javascript feature in order to support older web engines. We can apply this to SSJS since it only supports ECMAscript 3.0. You should be able to google whatever function/method you need to replicate and add 'Polyfill' to the end and find the script you need
 
 ## Debugging SSJS
 The classic way of debugging SSJS is to create a CloudPage, plug your code in, and debug by outputting values using 'Write()'. However, the downside to this is that CloudPages can be finicky. Sometimes, the changes show instantly after you publish them, and other times it can take up to 5 minutes. So here are some additional useful tips to help debug your code.
