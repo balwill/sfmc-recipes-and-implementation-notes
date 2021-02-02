@@ -28,6 +28,12 @@ In short, if you're using SFMC, you should really learn SSJS. It will make your 
 
 # SSJS Notes
 
+## Email360.io SSJS Library
+An amazing SSJS library came out by the folks at email360, check out the [docs](https://docs.email360.io/) to see the functions available. This tool makes life with SSJS 10x easier. For example, with SSJS you weren't able to retrieve or update salesforce records, which forced you to use AMPscript, but with Email360's SSJS library, you have simple functions available to make those requests. 
+
+### How to use Email360's SSJS library
+For instructions on how to get started, visit the github page [here](https://github.com/email360/ssjs-lib).
+
 ## How to Convert Javascript ES6 -> ES3
 Unfortunately, SSJS doesn't support ECMAscript 3.0 (AKA ES3), this means SSJS can only us js capabilties from 1999. However, if you are someone who knows how to write in modern day javascript, or you just want to use a method not available in ES3, you can leverage what's called Polyfills
 
