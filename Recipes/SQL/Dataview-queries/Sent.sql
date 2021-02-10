@@ -9,5 +9,5 @@ SELECT
     , EventDate
     , Domain
     , TriggererSendDefinitionObjectID
-    , TriggererSendDefinitionObjectID
+    , TriggeredSendCustomerKey
 FROM _sent 

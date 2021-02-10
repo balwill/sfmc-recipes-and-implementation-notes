@@ -21,11 +21,15 @@
 ## System
 
 - [**\_EnterpriseAttributes**](https://help.salesforce.com/articleView?id=sf.mc_as_data_view_enterpriseattribute.htm&type=5)
+  - Not needed unless you're using enterprise attributes, which is rarely used
 - [**\_Journey**](https://help.salesforce.com/articleView?id=sf.mc_as_data_view_journey.htm&type=5)
 - [**\_JourneyActivity**](https://help.salesforce.com/articleView?id=sf.mc_as_data_view_journey_activity.htm&type=5)
 - [**\_ListSubscribers**](https://help.salesforce.com/articleView?id=sf.mc_as_data_view_listsubscribers.htm&type=5)
+  - Not needed unless you're using Lists, which you should never do
 
 ## Social
+
+Unless you're using Social Studio, these data views are not needed.
 
 - [**\_SocialNetworkImpressions**](https://help.salesforce.com/articleView?id=sf.mc_as_data_view_social_network_impressions.htm&type=5)
 - [**\_SocialNetworkTracking**](https://help.salesforce.com/articleView?id=sf.mc_as_data_view_social_network_tracking.htm&type=5)
